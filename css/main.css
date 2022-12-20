@@ -1,0 +1,84 @@
+body {
+  font-family: 'Noto Sans KR', sans-serif;
+}
+a {
+  text-decoration: none;
+}
+img {
+  display: block;
+}
+.inner {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+
+/* HEADER  */
+header {
+  background: #fff;
+  position: fixed;
+  width: 100%;
+}
+header .inner {
+  height: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  
+}
+header .logo {
+  font-family: 'Montserrat', sans-serif;
+  color:#ef426f;
+  font-size: 30px;
+
+}
+header .main-menu {
+  display: flex;
+  text-align:center;
+}
+header .main-menu > li {
+  margin: 0 30px;
+}
+header .main-menu > li > a {
+  font-size: 18px;
+  color:#000;
+}
+header .sub-menu{
+  background-color: coral;
+  opacity: 0;
+  visibility: hidden;
+}
+header .sub-menu li {
+  padding: 10px 0;
+}
+header .sub-menu li a {
+  font-size: 15px;
+  color:#000;
+}
+header .main-menu:hover .sub-menu {
+  /*  transition: all .5s 지속시간  .5s 딜레이 시간 */ 
+  transition: all .1s .1s
+ }
+header .icon-box{
+  display: flex;
+  gap: 10px;
+}
+header .icon-box button {
+  background: transparent;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
+header .icon-box button span {
+  font-size: 30px;
+}
+
+
+/* VISUAL */
+
+/* NEW */
+.new .inner {
+  display: flex;
+
+}
+
