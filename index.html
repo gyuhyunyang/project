@@ -10,11 +10,8 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css">
 
   <!-- Swiper.js 연결 -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/> 
   
-  <!-- main css 연결 -->
-  <link rel="stylesheet" href="./css/main.css">
-
   <!--  구글폰트 -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -22,6 +19,9 @@
 
   <!-- 구글 머티리얼 아이콘 연결 -->
   <link href="https://fonts.googleapis.com/css2?family=Material+Icons" rel="stylesheet">
+
+  <!-- main css 연결 -->
+  <link rel="stylesheet" href="./css/main.css">
 
   <!-- Swiper.js 연결 --> 
   <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
@@ -50,11 +50,11 @@
       <nav class="gnb">
         <ul class="main-menu">
           <li>
-            <a href="javascript: void(0)">Brand Story</a>
+            <a href="javascript: void(0)">브랜드스토리</a>
             
           </li>
           <li>
-            <a href="javascript: void(0)">Product</a>
+            <a href="javascript: void(0)">제품소개</a>
             <ul class="sub-menu">
               <li><a href="javascript: void(0)">BEST</a></li>
               <li><a href="javascript: void(0)">NEW</a></li>
@@ -63,14 +63,14 @@
             </ul>
           </li>
           <li>
-            <a href="javascript: void(0)">Event</a>
+            <a href="javascript: void(0)">이벤트</a>
             <ul class="sub-menu">
               <li><a href="javascript: void(0)">진행중 이벤트</a></li>
               <li><a href="javascript: void(0)">종료 이벤트</a></li>
             </ul>
           </li>
           <li>
-            <a href="javascript: void(0)">Community</a>
+            <a href="javascript: void(0)">커뮤니티</a>
             <ul class="sub-menu">
               <li><a href="javascript: void(0)">nocice</a></li>
               <li><a href="javascript: void(0)">FAQ</a></li>
@@ -92,6 +92,7 @@
       <div class="icon-box">
         
         <button class="search">
+          <input type="text">
           <span class="material-icons">search</span>
         </button>
         <button class="menu">
@@ -162,13 +163,13 @@
   </section> 
 
   <!-- BRAND -->
-  <section class="brand">
+  <section class="brand scroll-spy">
     <div class="inner">
       <div class="img-box">
-        <p><img src="./images/brand01.jpg"></p>
-        <p><img src="./images/brand02.jpg"></p>
+        <p class="back-to-position to-bottom delay-1"><img src="./images/brand01.jpg"></p>
+        <p class="back-to-position to-bottom delay-2"><img src="./images/brand02.jpg"></p>
       </div>
-      <div class="text-box">
+      <div class="text-box back-to-position to-top">
         <h3>
           <span>Brand Story</span>
           About Item</h3>
@@ -185,16 +186,25 @@
   <section class="banner">
     <div class="inner">
       <div class="banner__item">
-        <p></p>
-        <img src="">
-        <h3></h3>
+        <p class="p1">Lorem ipsum1</p>
+        <img src="http://via.placeholder.com/325x525" alt="image">
+        <h3>Lorem ipsum2</h3>
         <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
 
       </div>
       <div class="banner__item">
+        <p>Lorem ipsum1</p>
+        <img src="http://via.placeholder.com/325x525" alt="image">
+        <h3>Lorem ipsum2</h3>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
 
       </div>
+
       <div class="banner__item">
+        <p>Lorem ipsum1</p>
+        <img src="http://via.placeholder.com/325x525" alt="image">
+        <h3>Lorem ipsum2</h3>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
 
       </div>
 
@@ -209,19 +219,23 @@
         <div class="swiper-wrapper">    
           <div class="swiper-slide">
             <p class="data">2022.12.01</p>
-            <p calss="title">1안녕하세요 공지사항입니다.</p>            
+            <p calss="title">1 안녕하세요 공지사항입니다.</p>            
           </div>
           <div class="swiper-slide">
-            <p>2022.12.01</p>
-            <p>2안녕하세요 공지사항입니다.</p>              
+            <p class="data">2022.12.01</p>
+            <p calss="title">2 안녕하세요 공지사항입니다.</p>          
           </div>
           <div class="swiper-slide">
-            <p>2022.12.01</p>
-            <p>3안녕하세요 공지사항입니다.</p>              
+            <p class="data">2022.12.01</p>
+            <p calss="title">3 안녕하세요 공지사항입니다.</p>                   
           </div>
         </div>
-        <div class="swiper-button-prev"></div>
-        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev">
+          <span class="material-icons">chevron_left</span>
+        </div>
+        <div class="swiper-button-next">
+          <span class="material-icons">chevron_right</span>
+        </div>
       </div>
       
 
