@@ -6,8 +6,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>COSMETIC</title>
 
-  <!-- css -->
+  <!-- css 스타일 초기화 -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css">
+
+  <!-- Swiper.js 연결 -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
+  
+  <!-- main css 연결 -->
   <link rel="stylesheet" href="./css/main.css">
 
   <!--  구글폰트 -->
@@ -18,13 +23,20 @@
   <!-- 구글 머티리얼 아이콘 연결 -->
   <link href="https://fonts.googleapis.com/css2?family=Material+Icons" rel="stylesheet">
 
-  <!-- js -->
-  <script src="./js/main.js" defer></script>
-
-  <!-- Swiper.js 연결 -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
+  <!-- Swiper.js 연결 --> 
   <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
 
+  <!-- gsap 연결하기 : 순서 주의(main.js에서 사용하니까 더 앞에 위치) -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js" integrity="sha512-gmwBmiTVER57N3jYS3LinA9eb8aHrJua5iQD7yqYCKa5x6Jjc7VDVaEA0je0Lu0bP9j7tEjV3+1qUm6loO99Kw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+  <!-- ScrollToPlugin 연결 -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/ScrollToPlugin.min.js" integrity="sha512-Eenw6RBFiF4rO89LCaB5fkd4WXI4Y7GSRxrLMMWx73dZNcl+dBU3/pJtITD2gTCoEGIf/Ph3spwp0zZnF+UEJg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  
+  <!-- ScrollMagic.js 연결 -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/ScrollMagic.min.js" integrity="sha512-8E3KZoPoZCD+1dgfqhPbejQBnQfBXe8FuwL4z/c8sTrgeDMFEnoyTlH3obB4/fV+6Sg0a0XF+L/6xS4Xx1fUEg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  
+  <!-- js -->
+  <script src="./js/main.js" defer></script>
 
 </head>
 <body>
@@ -196,16 +208,16 @@
       <div class="swiper">
         <div class="swiper-wrapper">    
           <div class="swiper-slide">
-            <p>2022.12.01</p>
-            <h3>1안녕하세요 공지사항입니다.</h3>            
+            <p class="data">2022.12.01</p>
+            <p calss="title">1안녕하세요 공지사항입니다.</p>            
           </div>
           <div class="swiper-slide">
             <p>2022.12.01</p>
-            <h3>2안녕하세요 공지사항입니다.</h3>              
+            <p>2안녕하세요 공지사항입니다.</p>              
           </div>
           <div class="swiper-slide">
             <p>2022.12.01</p>
-            <h3>3안녕하세요 공지사항입니다.</h3>              
+            <p>3안녕하세요 공지사항입니다.</p>              
           </div>
         </div>
         <div class="swiper-button-prev"></div>
