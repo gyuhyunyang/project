@@ -24,14 +24,34 @@ headerEl.addEventListener('mouseleave', function (){
   });
 });
 
-
+// 스크롤시 bg넣기
 window.addEventListener('scroll', function(){
   if (window.scrollY > 10){
-    headerEl.classList.add('bg');
+    headerEl.classList.add('bg2');
   } else {
-    headerEl.classList.remove('bg'); 
+    headerEl.classList.remove('bg2'); 
   }  
 });
+
+// 햄버거버튼
+const btnHamburger = document.querySelector('.btn-hamburger');
+const allEl = document.querySelector('.all-menu');
+
+btnHamburger.addEventListener('click', function(){
+  allEl.classList.toggle('active')
+})
+
+
+btnHamburger.addEventListener('click', function () {
+  navEl.classList.toggle('active');
+  btnGroup.classList.toggle('active');
+});
+
+
+
+
+
+
 
 
 // div.search 요소 선택시 강제 포커스 및 제어
@@ -40,31 +60,25 @@ window.addEventListener('scroll', function(){
 const searchEl = document.querySelector('.search');
 const searchInputEl = searchEl.querySelector('input');
 
+// js
 // 검색창 요소를 클릭하면 input 요소를 포커스하도록 실행
 searchEl.addEventListener('click', function(){
-  console.log("click");
-  console.log(searchInputEl);
-  // searchInputEl.focus();
+  searchInputEl.style.visibility = "visible";
+  searchInputEl.focus();
+  });
+  
+  // input요소에 포커스되면 실행
+  searchInputEl.addEventListener('focus', function(){
   searchEl.classList.add('focused');
   searchInputEl.setAttribute('placeholder', '통합검색');
-
-});
-
-// input요소에 포커스되면 실행
-searchInputEl.addEventListener('focus', function(){
-  console.log("focus");
-
-  searchEl.classList.add('focused');
-  searchInputEl.setAttribute('placeholder', '통합검색');
-
-});
-
-// input요소에 포커스가 해제(블러)되면 실행
-searchInputEl.addEventListener('blur', function(){
+  });
+  
+  // input요소에 포커스가 해제(블러)되면 실행
+  searchInputEl.addEventListener('blur', function(){
   searchEl.classList.remove('focused');
   searchInputEl.setAttribute('placeholder', '');
-
-});
+  searchInputEl.style.visibility = "hidden";
+  });
 
 
 // product
@@ -122,7 +136,6 @@ const noticeSwiper = new Swiper('.notice .swiper', {
     el: '.swiper-scrollbar',
   },
 });
-
 
 
 
