@@ -26,7 +26,7 @@ headerEl.addEventListener('mouseleave', function (){
 
 
 window.addEventListener('scroll', function(){
-  if (window.scrollY > 100){
+  if (window.scrollY > 10){
     headerEl.classList.add('bg');
   } else {
     headerEl.classList.remove('bg'); 
@@ -42,12 +42,18 @@ const searchInputEl = searchEl.querySelector('input');
 
 // 검색창 요소를 클릭하면 input 요소를 포커스하도록 실행
 searchEl.addEventListener('click', function(){
-  searchInputEl.focus();
+  console.log("click");
+  console.log(searchInputEl);
+  // searchInputEl.focus();
+  searchEl.classList.add('focused');
+  searchInputEl.setAttribute('placeholder', '통합검색');
 
 });
 
 // input요소에 포커스되면 실행
 searchInputEl.addEventListener('focus', function(){
+  console.log("focus");
+
   searchEl.classList.add('focused');
   searchInputEl.setAttribute('placeholder', '통합검색');
 
@@ -59,46 +65,6 @@ searchInputEl.addEventListener('blur', function(){
   searchInputEl.setAttribute('placeholder', '');
 
 });
-
-
-
-
-window.addEventListener('scroll', function(){
-  // console.log(window.scrollY);
-
-  if (window.scrollY > 500){
-    // badgeEl.style.display = 'none';
-
-    // gsap.to(요소, 시간, 속성) 메소드: css속성을 통해 애니메이션 처리
-    gsap.to(badgeEl, 0.6, {
-      opacity: 0,
-      display: 'none'
-    });
-
-    // 상단으로 이동 버튼 보이기 
-    gsap.to(toTopEl, 0.6, {
-      opacity: 1,
-      x: 0 // x축 0px 지점으로 이동
-    });
-  } else {
-    // badgeEl.style.display = 'block'
-
-    gsap.to(badgeEl, 0.6, {
-      opacity: 1,
-      display: 'block'
-    });
-
-    // 상단으로 이동 버튼 숨기기 
-    gsap.to(toTopEl, 0.6, {
-      opacity: 0,
-      x: 100 // x축 0px 지점으로 이동
-    });
-
-  }
-})
-
-
-
 
 
 // product
