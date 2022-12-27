@@ -24,6 +24,10 @@ headerEl.addEventListener('mouseleave', function (){
   });
 });
 
+
+
+
+
 // 스크롤시 bg넣기
 window.addEventListener('scroll', function(){
   if (window.scrollY > 10){
@@ -111,6 +115,23 @@ const productSwiper = new Swiper('.product .swiper', {
   slidesPerView: 3, // 한번에 보여줄 슬라이드 갯수  
   spaceBetween: 20,  // 슬라이드 사이 여백(간격) px
  
+  breakpoints: {
+    // when window width is >= 320px
+    320: {
+      slidesPerView: 2,
+      spaceBetween: 20
+    },
+    // when window width is >= 480px
+    480: {
+      slidesPerView: 2,
+      spaceBetween: 30
+    },
+    // when window width is >= 640px
+    640: {
+      slidesPerView: 3,
+      spaceBetween: 40
+    }
+  },
 
   // Navigation arrows
   navigation: {
@@ -161,3 +182,16 @@ const noticeSwiper = new Swiper('.notice .swiper', {
 // 현재 연도 표시
 const thisYear = document.querySelector('.this-year')
 thisYear.textContent = new Date().getFullYear(); //
+
+
+
+
+
+
+const allMenuEl = document.querySelector('.all-menu');
+
+
+body.addEventListenerr('click', function() {
+  allMenuEl.classList.remove('.active');
+})
+
