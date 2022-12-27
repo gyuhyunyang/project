@@ -117,7 +117,7 @@ header .icon-box .btn-search input:focus{
 
 .all-menu {
   background-color: #fff;
-  position: absolute;
+  position: fixed;
   width: 100%;
   height: 100%;
   z-index: 99999;
@@ -125,6 +125,17 @@ header .icon-box .btn-search input:focus{
 }
 .all-menu.active{
   display: block;
+}
+.all-menu .btn-close {
+  position: absolute;
+  top: 150px;
+  right: 200px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+.all-menu .btn-close .material-icons {
+  font-size: 40px;
 }
 .all-menu .main-menu {
   display: flex;
@@ -149,6 +160,7 @@ header .icon-box .btn-search input:focus{
   display: block;
   font-weight: 300;
 }
+
 
 /* VISUAL */
 .visual img {
@@ -276,14 +288,27 @@ header .icon-box .btn-search input:focus{
 
 /* BANNER */
 .banner {
-  padding: 150px;
+  padding: 150px 0;
 }
 .banner .inner {
   display: flex;
+  justify-content: space-between;
 }
-.banner .banner__item .p1 {
-  transform: rotate(270deg)
+.banner .banner__item img {
+  margin-bottom: 20px;
 }
+.banner .banner__item h3 {
+  font-family: 'Lora', serif;
+  color:#000;
+  font-size: 30px;
+  margin-bottom: 20px;
+}
+.banner .banner__item p{
+  line-height: 1.5;
+  color: #a1a1a1;
+  font-weight: 300;
+}
+.pt{padding-top:100px;}
 
 /* NOTICE */
 .notice {
@@ -336,7 +361,6 @@ header .icon-box .btn-search input:focus{
   border-radius: 50%;
   line-height: 30px;
   text-align: center;
- 
 }
 .notice .material-icons:hover {
   border: 1px solid #000;
@@ -366,19 +390,27 @@ footer .footer-menu li a{
   color: #fff;
 }
 footer .info span {
-  color: #3b3b3b;
+  color: #5e5e5e;
+  line-height: 1.5;
+  letter-spacing: -0.5px;
 }
 
 footer .fbottom {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   border-top: 1px solid #202020;
   padding: 20px 0;
   margin-top: 20px;
+
 }
 footer .fbottom .copyright{
   font-size: 14px;
   color: #474444;
+}
+footer .sns-box {
+  display: flex;
+  gap: 20px;
 }
 
 

@@ -41,24 +41,19 @@ btnHamburger.addEventListener('click', function(){
   allEl.classList.toggle('active')
 })
 
-
-btnHamburger.addEventListener('click', function () {
-  navEl.classList.toggle('active');
-  btnGroup.classList.toggle('active');
+// 닫기버튼
+const btnClose = document.querySelector('.btn-close');
+btnClose.addEventListener('click', function() {
+  allEl.classList.remove('active');
 });
-
-
-
-
-
 
 
 
 // div.search 요소 선택시 강제 포커스 및 제어
 // 검색창 요소 (.search) 찾기
-
-const searchEl = document.querySelector('.search');
+const searchEl = document.querySelector('.btn-search');
 const searchInputEl = searchEl.querySelector('input');
+
 
 // js
 // 검색창 요소를 클릭하면 input 요소를 포커스하도록 실행
@@ -79,6 +74,30 @@ searchEl.addEventListener('click', function(){
   searchInputEl.setAttribute('placeholder', '');
   searchInputEl.style.visibility = "hidden";
   });
+
+
+// 비주얼
+const visualSwiper = new Swiper('.visual .swiper', {
+  // Optional parameters
+  direction: 'horizontal',
+  loop: true, // 반복 재생 여부
+  autoplay: { // 자동 재생 여부
+    delay: 5000 // 5초 마다 슬라이드 바뀜
+   },
+  slidesPerView: 1, // 한번에 보여줄 슬라이드 갯수  
+ 
+
+  // Navigation arrows
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+
+  // And if we need scrollbar
+  scrollbar: {
+    el: '.swiper-scrollbar',
+  },
+});
 
 
 // product
