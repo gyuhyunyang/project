@@ -52,34 +52,6 @@ btnClose.addEventListener('click', function() {
 });
 
 
-
-// div.search 요소 선택시 강제 포커스 및 제어
-// 검색창 요소 (.search) 찾기
-const searchEl = document.querySelector('.btn-search');
-const searchInputEl = searchEl.querySelector('input');
-
-
-// js
-// 검색창 요소를 클릭하면 input 요소를 포커스하도록 실행
-searchEl.addEventListener('click', function(){
-  searchInputEl.style.visibility = "visible";
-  searchInputEl.focus();
-  });
-  
-  // input요소에 포커스되면 실행
-  searchInputEl.addEventListener('focus', function(){
-  searchEl.classList.add('focused');
-  searchInputEl.setAttribute('placeholder', '통합검색');
-  });
-  
-  // input요소에 포커스가 해제(블러)되면 실행
-  searchInputEl.addEventListener('blur', function(){
-  searchEl.classList.remove('focused');
-  searchInputEl.setAttribute('placeholder', '');
-  searchInputEl.style.visibility = "hidden";
-  });
-
-
 // 비주얼
 const visualSwiper = new Swiper('.visual .swiper', {
   // Optional parameters
@@ -187,11 +159,37 @@ thisYear.textContent = new Date().getFullYear(); //
 
 
 
+const toTopEl = document.querySelector('.top');
+toTopEl.addEventListener('click', function() {
+  gsap.to(window, 0.6,{
+    scrollTo: 0 // 페이지의 0px 지점(최상단)으로 이동
+  });
+});
 
-const allMenuEl = document.querySelector('.all-menu');
+// window : 브라우저 창 객체
+window.addEventListener('scroll', function(){
+  // console.log(window.scrollY);
 
+  if (window.scrollY > 500){
 
-body.addEventListenerr('click', function() {
-  allMenuEl.classList.remove('.active');
+    // 상단으로 이동 버튼 보이기 
+    gsap.to(toTopEl, 0.6, {
+      opacity: 1,
+      x: 0 // x축 0px 지점으로 이동
+    });
+  } else {
+
+    // 상단으로 이동 버튼 숨기기 
+    gsap.to(toTopEl, 0.6, {
+      opacity: 0,
+      x: 100 // x축 0px 지점으로 이동
+    });
+
+  }
 })
+
+
+
+
+
 

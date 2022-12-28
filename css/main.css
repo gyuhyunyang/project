@@ -20,6 +20,7 @@ header {
   width: 100%;
   z-index: 9;
   transition:  height .5s;
+  background-color: #fff;
 }
 header .inner {
   height: 100px;
@@ -33,6 +34,9 @@ header .logo {
   color: #101010;
   font-size: 30px;
   letter-spacing: 2px;
+}
+header .logo img {
+  width: 180px;
 }
 header .main-menu {
   display: flex;
@@ -75,43 +79,37 @@ header .main-menu:hover .sub-menu {
   /*  transition: all .5s 지속시간  .5s 딜레이 시간 */ 
   transition: all .1s .1s
 }
-header .icon-box{
+header .top-menu{
   display: flex;
   gap: 10px;
 }
-header .icon-box button {
+header .top-menu .search {
+  position: relative;
+}
+header .top-menu .search input {
+  border: none;
+    border-bottom: 2px solid #000;
+    height: 25px;
+}
+header .top-menu .search input:focus {
+  outline: none;
+}
+header .top-menu .search span {
+  position: absolute;
+  right: 0;
+  font-size:26px;
+}
+header .top-menu .btn-hamburger {
   background: transparent;
   border: none;
   padding: 0;
   cursor: pointer;
 }
-header .icon-box button span {
-  font-size: 30px;
+header .top-menu .btn-hamburger span {
+  font-size: 35px;
 }
-header .icon-box .btn-search {
-  /* position: relative; */
-  display: flex;
-  height: 34px;
-}
-header .icon-box .btn-search input{
-  /* 검색창 스타일 */
-  width: 0px;
-  height: 34px;
-  padding : 4px 0;
-  box-sizing: border-box;
-  outline: none;
-  background-color: transparent;
-  color:#777;
-  font-size: 12px;
-  border: none;
-  border-bottom: 2px solid transparent;
-  transition: border-bottom .6s;
-  visibility: hidden;
-}
-header .icon-box .btn-search input:focus{
-  width: 190px;
-  border-bottom: 2px solid #000;
-}
+
+
 .bg,
 .bg2 {background-color: #fff;}
 .all-menu {
@@ -180,6 +178,12 @@ header .icon-box .btn-search input:focus{
 .product .inner {
   max-width: 1400px
 }
+.product h3 {
+  font-family: 'Lora', serif;
+  text-align: center;
+  font-size: 40px;
+  margin-bottom: 60px;
+}
 .product .product__box {
   text-align:center;
   cursor: pointer;
@@ -218,6 +222,26 @@ header .icon-box .btn-search input:focus{
 .product .swiper-button-next {
   right: 0;
 }
+.product .btn-wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 200px;
+  margin: 60px auto 0;
+  background: #403d3d;
+  height: 60px;
+  border-radius: 5px;
+  gap: 30px;
+}
+.product .btn-wrap a {
+  display: block;
+  color:#fff;
+  font-size: 18px;
+}
+.product .btn-wrap:hover {
+  background-color: #ddd;
+}
+
 
 /* BRAND */
 .brand {
@@ -407,7 +431,7 @@ footer .footer-top .address dd {
 footer .footer-top .sns-box {
   display: flex;
   gap: 10px;
-  margin-top: 20px;
+  margin-top: 50px;
 }
 footer .footer-top .main-menu {
   display: flex;
@@ -453,6 +477,22 @@ footer .footer-bottom .footer-menu li a {
 footer .footer-bottom .footer-menu li:last-child a {
   font-weight: 500;
   color:#fff
+}
+
+/* SCROLL TO TOp */
+.top {
+  position: fixed;
+  bottom: 50px;
+  right: 50px;
+  z-index: 99;
+  width: 50px;
+  height: 50px;
+  background-color: #424242;
+  color: #fff;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 
@@ -562,7 +602,7 @@ footer .footer-bottom .footer-menu li:last-child a {
     display: none;
   }
   .all-menu {
-    width: 200px;
+    width: 220px;
     right:0;
   }
   .all-menu .main-menu {
@@ -663,7 +703,6 @@ footer .footer-bottom .footer-menu li:last-child a {
   }
   footer .footer-top .sns-box {
       justify-content: center;
-      margin-top: 50px;
   }
   footer .footer-top .sitemap {
     display: none;
